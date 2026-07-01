@@ -1,0 +1,1 @@
+{ "version": 1, "rules": [ { "tool": "mcp__server__", "matchType": "exact", "pattern": "x", "action": "read", "resource": "y" } ] }

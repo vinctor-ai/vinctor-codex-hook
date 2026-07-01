@@ -1,0 +1,27 @@
+{
+  "name": "vinctor-codex-hook",
+  "version": "0.1.0-preview.2",
+  "description": "Codex CLI PreToolUse hook routing tool calls through Vinctor runtime authorization.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "bin": { "vinctor-codex-hook": "./dist/src/cli.js" },
+  "files": ["dist/src", "README.md", "LICENSE"],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc -p tsconfig.json && chmod +x dist/src/cli.js",
+    "test": "npm run build && node --test dist/test/*.test.js dist/test/commands/*.test.js dist/test/defaults/*.test.js dist/test/classifiers/*.test.js dist/test/classifiers/mcp/*.test.js",
+    "test:integration": "npm run build && node --test dist/test-integration/*.test.js",
+    "coverage:mapping": "npm run build && bash tools/codex-coverage/explain-matrix.sh",
+    "coverage:measure": "npm run build && bash tools/codex-coverage/measure.sh"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.6",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.4.0"
+  }
+}

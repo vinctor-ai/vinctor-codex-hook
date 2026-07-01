@@ -1,0 +1,1 @@
+{ "version": 1, "rules": [ { "tool": "Glob", "matchType": "prefix", "pattern": "x", "action": "send", "resource": "y" } ] }

@@ -1,0 +1,4 @@
+{ "version": 1, "rules": [
+  { "tool": "mcp__custom__do_thing", "matchType": "exact", "pattern": "mcp__custom__do_thing", "action": "execute", "resource": "custom/thing" },
+  { "tool": "mcp__filesystem__read_file", "matchType": "glob", "pattern": "**/etc/**", "inputField": "path", "action": "read", "resource": "secret/etc" }
+] }

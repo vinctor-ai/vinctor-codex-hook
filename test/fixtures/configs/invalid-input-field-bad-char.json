@@ -1,0 +1,1 @@
+{ "version": 1, "rules": [ { "tool": "mcp__filesystem__read_file", "matchType": "exact", "pattern": "x", "inputField": "bad field", "action": "read", "resource": "y" } ] }

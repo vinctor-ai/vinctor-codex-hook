@@ -1,0 +1,1 @@
+{ "hook_event_name": "PreToolUse", "model": "gpt-5.1-codex", "turn_id": "t2", "tool_name": "apply_patch", "tool_input": { "input": "*** Begin Patch\n*** Update File: config/.env\n@@\n-A=1\n+A=2\n*** End Patch" } }

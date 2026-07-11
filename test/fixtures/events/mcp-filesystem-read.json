@@ -1,0 +1,1 @@
+{ "hook_event_name": "PreToolUse", "tool_name": "mcp__filesystem__read_file", "tool_input": { "path": "/etc/passwd" } }

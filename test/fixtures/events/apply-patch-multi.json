@@ -1,0 +1,1 @@
+{ "hook_event_name": "PreToolUse", "tool_name": "apply_patch", "tool_input": { "input": "*** Begin Patch\n*** Update File: src/index.ts\n+x\n*** Delete File: .github/workflows/ci.yml\n*** End Patch" } }

@@ -1,0 +1,31 @@
+{
+  "name": "vinctor-codex-hook",
+  "version": "0.1.1",
+  "description": "Codex PreToolUse authorization through Vinctor.",
+  "author": {
+    "name": "Vinctor contributors",
+    "url": "https://vinctor.dev"
+  },
+  "homepage": "https://vinctor.dev",
+  "repository": "https://github.com/vinctor-ai/vinctor-codex-hook",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "authorization",
+    "security",
+    "vinctor"
+  ],
+  "interface": {
+    "displayName": "Vinctor Codex Hook",
+    "shortDescription": "Authorize selected Codex tool calls before execution.",
+    "longDescription": "Routes selected Codex PreToolUse events through a Vinctor authorization service and fails closed for mapped calls.",
+    "developerName": "Vinctor contributors",
+    "category": "Security",
+    "capabilities": [
+      "PreToolUse authorization"
+    ],
+    "defaultPrompt": [
+      "Verify that Vinctor authorization is active for this Codex session."
+    ]
+  }
+}

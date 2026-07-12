@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "tool": "WebSearch",
+      "matchType": "prefix",
+      "pattern": "company secret",
+      "action": "send",
+      "resource": "web/search/sensitive"
+    }
+  ]
+}

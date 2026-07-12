@@ -1,0 +1,4 @@
+{ "version": 1, "rules": [
+  { "tool": "Bash", "matchType": "prefix", "pattern": "terraform destroy", "action": "delete", "resource": "infra/terraform/destroy" },
+  { "tool": "apply_patch", "matchType": "glob", "pattern": "**/secrets/**", "action": "write", "resource": "secret/custom" }
+] }

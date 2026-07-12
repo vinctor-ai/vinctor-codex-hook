@@ -1,0 +1,1 @@
+{ "hook_event_name": "PreToolUse", "tool_name": "mcp__github__create_issue", "tool_input": { "owner": "pkachuc", "repo": "vinctor-codex-hook", "title": "x", "body": "y" } }

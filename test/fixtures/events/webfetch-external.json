@@ -1,0 +1,8 @@
+{
+  "hook_event_name": "PreToolUse",
+  "session_id": "session_test",
+  "cwd": "/repo",
+  "tool_name": "WebFetch",
+  "tool_input": { "url": "https://api.example.com/v1/data?token=secret&foo=bar#section" },
+  "tool_use_id": "toolu_test"
+}

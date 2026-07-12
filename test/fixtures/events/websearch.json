@@ -1,0 +1,8 @@
+{
+  "hook_event_name": "PreToolUse",
+  "session_id": "session_test",
+  "cwd": "/repo",
+  "tool_name": "WebSearch",
+  "tool_input": { "query": "vinctor runtime authorization" },
+  "tool_use_id": "toolu_test"
+}

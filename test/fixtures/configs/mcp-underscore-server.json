@@ -1,0 +1,1 @@
+{ "version": 1, "rules": [ { "tool": "mcp__notion_internal__create_page", "matchType": "exact", "pattern": "mcp__notion_internal__create_page", "action": "write", "resource": "notion/page" } ] }

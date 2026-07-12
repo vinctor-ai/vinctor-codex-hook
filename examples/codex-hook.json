@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "tool": "Bash",
+      "matchType": "prefix",
+      "pattern": "terraform destroy",
+      "action": "delete",
+      "resource": "infra/terraform/destroy"
+    },
+    {
+      "tool": "apply_patch",
+      "matchType": "glob",
+      "pattern": "**/secrets/**",
+      "action": "write",
+      "resource": "secret/app"
+    },
+    {
+      "tool": "apply_patch",
+      "matchType": "glob",
+      "pattern": "**/migrations/**",
+      "action": "deploy",
+      "resource": "db/migration"
+    },
+    {
+      "tool": "mcp__filesystem__read_file",
+      "matchType": "glob",
+      "pattern": "**/etc/**",
+      "inputField": "path",
+      "action": "read",
+      "resource": "secret/etc"
+    }
+  ]
+}

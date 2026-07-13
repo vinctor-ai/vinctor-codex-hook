@@ -1,0 +1,8 @@
+{
+  "hook_event_name": "PreToolUse",
+  "session_id": "session_test",
+  "cwd": "/repo",
+  "tool_name": "WebFetch",
+  "tool_input": { "url": "http://127.0.0.1:8080/health" },
+  "tool_use_id": "toolu_test"
+}

@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch|Edit|Write|mcp__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${PLUGIN_ROOT}/dist/src/cli.js",
+            "timeout": 30,
+            "statusMessage": "Checking Vinctor authorization"
+          }
+        ]
+      }
+    ]
+  }
+}

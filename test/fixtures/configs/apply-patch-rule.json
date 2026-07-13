@@ -1,0 +1,3 @@
+{ "version": 1, "rules": [
+  { "tool": "apply_patch", "matchType": "glob", "pattern": "**/migrations/**", "action": "deploy", "resource": "db/migration" }
+] }

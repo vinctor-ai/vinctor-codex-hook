@@ -1,0 +1,34 @@
+{
+  "name": "vinctor-codex-hook",
+  "version": "0.3.0",
+  "description": "Codex CLI PreToolUse hook routing tool calls through Vinctor runtime authorization.",
+  "license": "MIT",
+  "keywords": ["codex", "hook", "authorization", "ai-agents", "security", "vinctor"],
+  "homepage": "https://vinctor.dev",
+  "repository": { "type": "git", "url": "git+https://github.com/vinctor-ai/vinctor-codex-hook.git" },
+  "bugs": { "url": "https://github.com/vinctor-ai/vinctor-codex-hook/issues" },
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "bin": { "vinctor-codex-hook": "./dist/src/cli.js" },
+  "files": ["dist/src", ".codex-plugin", "hooks", "README.md", "LICENSE"],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run verify:release",
+    "build": "tsc -p tsconfig.json && chmod +x dist/src/cli.js",
+    "test": "npm run build && node --test dist/test/*.test.js dist/test/commands/*.test.js dist/test/defaults/*.test.js dist/test/classifiers/*.test.js dist/test/classifiers/mcp/*.test.js",
+    "test:integration": "npm run build && node --test dist/test-integration/*.test.js",
+    "verify:release": "npm test && npm run test:integration && npm pack --dry-run --ignore-scripts",
+    "coverage:mapping": "npm run build && bash tools/codex-coverage/explain-matrix.sh",
+    "coverage:measure": "npm run build && bash tools/codex-coverage/measure.sh"
+  },
+  "dependencies": {
+    "micromatch": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/micromatch": "^4.0.6",
+    "@types/node": "^20.19.41",
+    "typescript": "^5.4.0"
+  }
+}
